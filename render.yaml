@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: study-buddy
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: HF_TOKEN
+        sync: false
+      - key: HF_MODEL
+        value: Qwen/Qwen2.5-7B-Instruct-1M:fastest

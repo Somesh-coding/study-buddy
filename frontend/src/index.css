@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { font-family: 'VT323', monospace; color: #f3e7c2; background: #11100d; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: radial-gradient(circle at 50% -20%, #3b2b1c 0, #18140f 38%, #0e0d0b 80%); }
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+::selection { background: #e9b949; color: #15120d; }
+.scanlines::after { content: ''; pointer-events:none; position:fixed; inset:0; background:repeating-linear-gradient(to bottom, rgba(255,255,255,.025) 0, rgba(255,255,255,.025) 1px, transparent 1px, transparent 4px); mix-blend-mode:overlay; z-index:50; }
+.pixel-title { font-family: 'Press Start 2P', monospace; line-height: 1.6; }
+.crt-card { border: 3px solid #d3a53d; box-shadow: 7px 7px 0 #4e321d, inset 0 0 0 2px #2b2116; background: #19150f; }
+.crt-card:hover { box-shadow: 5px 5px 0 #4e321d, inset 0 0 0 2px #2b2116; transform: translate(2px,2px); }
+.pixel-btn { border: 3px solid #e5b94d; background: #d49a2a; color:#161109; box-shadow: 4px 4px 0 #6b421c; padding: .65rem .9rem; font-weight:700; text-transform:uppercase; }
+.pixel-btn:hover { background:#f0c85b; transform:translate(2px,2px); box-shadow:2px 2px 0 #6b421c; }
+.pixel-btn:disabled { opacity:.45; cursor:not-allowed; transform:none; box-shadow:4px 4px 0 #6b421c; }
+.pixel-btn.secondary { background:#252018; color:#e9d8aa; border-color:#765e35; box-shadow:4px 4px 0 #0a0907; }
+.pixel-btn.danger { background:#7c342a; border-color:#bb6655; color:#ffe5d5; }
+.retro-input { width:100%; background:#0e0d0a; border:2px solid #765e35; color:#f6e9c7; padding:.7rem .8rem; outline:none; }
+.retro-input:focus { border-color:#e5b94d; box-shadow:0 0 0 2px #3c2a18; }
+.badge { display:inline-flex; border:2px solid #765e35; padding:.2rem .45rem; color:#d9bd78; background:#211a12; }
+.progress-track { height:14px; border:2px solid #765e35; background:#0d0b09; }
+.progress-fill { height:100%; background:#d6a437; transition:width .3s ease; }
+.fade-in { animation: fade .25s ease; }
+@keyframes fade { from{opacity:0; transform:translateY(5px)} to{opacity:1; transform:none} }
