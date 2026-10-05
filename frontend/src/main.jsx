@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { BookOpen, Brain, CalendarDays, ChevronRight, FileText, Flame, Gauge, GraduationCap, HardDrive, Menu, MessageSquare, Plus, RefreshCw, Save, Trash2, Trophy, Upload, X } from 'lucide-react'
 import './index.css'
 
-const API = '/api'
+const API = import.meta.env.VITE_API_URL || '/api'
 const LS = { notes:'sb_notes', practice:'sb_practice', plan:'sb_plan', friend:'sb_friend' }
 const read = (k, fallback) => { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : fallback } catch { return fallback } }
 const write = (k,v) => localStorage.setItem(k, JSON.stringify(v))
