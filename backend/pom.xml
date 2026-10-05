@@ -21,7 +21,7 @@
     <description>Retro AI Study Buddy - Hacktoberfest 2026</description>
 
     <properties>
-        <java.version>22</java.version>
+        <java.version>21</java.version>
     </properties>
 
     <dependencies>
